@@ -1,13 +1,12 @@
 package com.example.tic_tac_toe;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
-
 import java.util.Objects;
 import java.util.Random;
 
@@ -57,10 +56,13 @@ public class PlayScreen extends AppCompatActivity {
             board[r][c] = currentPlayer;
 
             if (checkForWinner()) {
-                showResult(currentPlayer + " wins!");
-            } else if (isBoardFull()) {
+                Intent intent = new Intent(this, ResultScreen.class);
+                startActivity(intent);
+            }
+            else if (isBoardFull()) {
                 showResult("It's a draw");
-            } else {
+            }
+            else {
                 currentPlayer = (Objects.equals(currentPlayer, "X")) ? "O" : "X";
 
                 if (currentPlayer.equals("X")) {
@@ -85,7 +87,7 @@ public class PlayScreen extends AppCompatActivity {
         if (checkForWinner()) {
             showResult("Lmao. You Lose");
         } else if (isBoardFull()) {
-            showResult("It's a draw");
+            Toast.makeText(this, "It's a draw", Toast.LENGTH_SHORT).show();
         } else {
             currentPlayer = "O";
         }
@@ -112,11 +114,7 @@ public class PlayScreen extends AppCompatActivity {
         }
 
         // top right to bottom left diagonal
-        if (Objects.equals(board[0][2], currentPlayer) && Objects.equals(board[1][1], currentPlayer) && Objects.equals(board[2][0], currentPlayer)) {
-            return true;
-        }
-
-        return false;
+        return Objects.equals(board[0][2], currentPlayer) && Objects.equals(board[1][1], currentPlayer) && Objects.equals(board[2][0], currentPlayer);
     }
 
     private boolean isBoardFull() {
@@ -131,7 +129,7 @@ public class PlayScreen extends AppCompatActivity {
     }
 
     private void showResult(String message) {
-        Log.d("TicTacToe", "Game result: " + message);
+//        Log.d("TicTacToe", "Game result: " + message);
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
         resetGame();
     }
@@ -162,10 +160,10 @@ public class PlayScreen extends AppCompatActivity {
                 @SuppressLint("DiscouragedApi") int btnID = getResources().getIdentifier("box_" + i + "_" + j, "id", getPackageName());
                 Button btn = findViewById(btnID);
                 final int finalI = i;
-                final int finalj = j;
+                final int finalJ = j;
 
                 btn.setOnClickListener(view -> {
-                    onCellClick(finalI, finalj);
+                    onCellClick(finalI, finalJ);
                 });
             }
         }

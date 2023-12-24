@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         hardcore_btn.setOnClickListener(view -> {
-            Toast.makeText(this, "Will implement this later",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Welcome to Hardcore",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, hardcore_mode.class);
+            startActivity(intent);
         });
 
         exit_btn.setOnClickListener(view -> {

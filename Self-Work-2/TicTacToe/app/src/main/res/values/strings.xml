@@ -11,4 +11,9 @@
     <string name="skill_based">Skill Based</string>
     <string name="hardcore">Hardcore</string>
     <string name="hate_this"> You will hate this game mode ;) </string>
+    <string name="try_out_hard">Try Hardcore</string>
+    <string name="reset">Reset Game</string>
+    <string name="welcome_to_hard"> Hardcore Mode</string>
+    <string name="give_up">Give Up</string>
+    <string name="goto_main">Go To Main Menu</string>
 </resources>
