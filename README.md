@@ -5,3 +5,4 @@
 <hr/>
 
 ### [Self 1]() (20/12/2023 03:14:45): Login Page with Cats 
+### [Self 2]() (24/12/2023 16:40:12): Epic Tic Tac Toe with hardcore mode (Under construction)
