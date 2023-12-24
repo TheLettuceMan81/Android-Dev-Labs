@@ -4,5 +4,5 @@
 
 <hr/>
 
-### [Self 1]() (20/12/2023 03:14:45): Login Page with Cats 
-### [Self 2]() (24/12/2023 16:40:12): Epic Tic Tac Toe with hardcore mode (Under construction)
+### [Self 1](https://github.com/Penguin5681/Android-Dev-Labs/tree/main/Self-Work-1) (20/12/2023 03:14:45): Login Page with Cats 
+### [Self 2](https://github.com/Penguin5681/Android-Dev-Labs/tree/main/Self-Work-2) (24/12/2023 16:40:12): Epic Tic Tac Toe with hardcore mode (Under construction)
